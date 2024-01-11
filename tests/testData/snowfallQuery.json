@@ -1,0 +1,99 @@
+[
+  {
+    "score": 0.9094333,
+    "show": {
+      "id": 2415,
+      "url": "https://www.tvmaze.com/shows/2415/snowfall",
+      "name": "Snowfall",
+      "type": "Scripted",
+      "language": "English",
+      "genres": ["Drama", "Crime"],
+      "status": "Ended",
+      "runtime": null,
+      "averageRuntime": 64,
+      "premiered": "2017-07-05",
+      "ended": "2023-04-19",
+      "officialSite": "http://www.fxnetworks.com/shows/snowfall",
+      "schedule": { "time": "22:00", "days": ["Wednesday"] },
+      "rating": { "average": 8.1 },
+      "weight": 95,
+      "network": {
+        "id": 13,
+        "name": "FX",
+        "country": {
+          "name": "United States",
+          "code": "US",
+          "timezone": "America/New_York"
+        },
+        "officialSite": null
+      },
+      "webChannel": null,
+      "dvdCountry": null,
+      "externals": { "tvrage": 48932, "thetvdb": 328092, "imdb": "tt6439752" },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/448/1120693.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/448/1120693.jpg"
+      },
+      "summary": "<p>Los Angeles, 1983. A storm is coming and it's name is crack. <b>Snowfall</b> is a one-hour drama set against the infancy of the crack cocaine epidemic and it's ultimate radical impact on the culture as we know it. The story follows three characters on a violent collision course: Franklin Saint, young street entrepreneur on a quest for power; Gustavo \"El Oso\" Zapata, a Mexican wrestler caught up in a power struggle within a crime family; Teddy McDonald, a CIA operative running from a dark past who begins an off-book operation to fund the Nicaraguan Contras and Lucia Villanueva, the self-possessed daughter of a Mexican crime lord.</p>",
+      "updated": 1704795533,
+      "_links": {
+        "self": { "href": "https://api.tvmaze.com/shows/2415" },
+        "previousepisode": { "href": "https://api.tvmaze.com/episodes/2452614" }
+      }
+    }
+  },
+  {
+    "score": 0.43433535,
+    "show": {
+      "id": 33746,
+      "url": "https://www.tvmaze.com/shows/33746/snofall",
+      "name": "Snøfall",
+      "type": "Scripted",
+      "language": "Norwegian",
+      "genres": ["Children", "Family"],
+      "status": "Running",
+      "runtime": 25,
+      "averageRuntime": 25,
+      "premiered": "2016-12-01",
+      "ended": null,
+      "officialSite": "https://tv.nrk.no/serie/snoefall",
+      "schedule": {
+        "time": "18:00",
+        "days": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ]
+      },
+      "rating": { "average": null },
+      "weight": 74,
+      "network": {
+        "id": 1526,
+        "name": "NRK Super",
+        "country": {
+          "name": "Norway",
+          "code": "NO",
+          "timezone": "Europe/Oslo"
+        },
+        "officialSite": null
+      },
+      "webChannel": null,
+      "dvdCountry": null,
+      "externals": { "tvrage": null, "thetvdb": 320566, "imdb": "tt6294580" },
+      "image": {
+        "medium": "https://static.tvmaze.com/uploads/images/medium_portrait/288/721949.jpg",
+        "original": "https://static.tvmaze.com/uploads/images/original_untouched/288/721949.jpg"
+      },
+      "summary": "<p>Selma, a 9 year old girl who lost her parents in an accident, is now living with Ruth, a quite strict neighbour who was just supposed to temporarily look after Selma and her dog Casper.</p>",
+      "updated": 1704795406,
+      "_links": {
+        "self": { "href": "https://api.tvmaze.com/shows/33746" },
+        "previousepisode": { "href": "https://api.tvmaze.com/episodes/2694871" }
+      }
+    }
+  }
+]
