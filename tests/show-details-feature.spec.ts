@@ -19,6 +19,11 @@ test.describe("Show Details Feature", () => {
       await expect(showDetailsPage.summary).toContainText(
         "Devs focuses on a young software engineer named Lily Chan who works for Amaya"
       );
+      await showDetailsPage.expectGenres([
+        "Drama",
+        "Science-Fiction",
+        "Mystery",
+      ]);
     });
   });
 

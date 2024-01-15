@@ -4,7 +4,7 @@ interface Props {
 }
 
 export function Genres(props: Props) {
-  const { genres, className } = props;
+  const { genres, className = "" } = props;
 
   const hasNoGenres = genres.length === 0;
   if (hasNoGenres) {
@@ -13,7 +13,7 @@ export function Genres(props: Props) {
 
   return (
     <div className={`text-gray-500 ${className}`}>
-      Genres: {genres.join(", ")}
+      Genres: <span data-testId="genres">{genres.join(", ")}</span>
     </div>
   );
 }
