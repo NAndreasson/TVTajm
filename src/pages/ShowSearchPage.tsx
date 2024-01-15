@@ -36,7 +36,7 @@ function ShowsList(props: ShowsListProps) {
   );
 }
 
-export function Shows() {
+export function ShowSearchPage() {
   const { searchString } = useSearch();
 
   const query = useSearchShows(searchString);

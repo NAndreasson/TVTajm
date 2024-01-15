@@ -11,7 +11,7 @@ function BaseLayout({ children }: { children: React.ReactNode }) {
   );
 }
 
-export function Landing() {
+export function LandingPage() {
   return (
     <BaseLayout>
       <div className="flex flex-col gap-4 w-full">

@@ -8,7 +8,7 @@ import { ShowDetails, ShowSkeleton } from "../components/Show";
 import { Helmet } from "react-helmet-async";
 import { DelayedLoader } from "../components/DelayedLoader";
 
-export function Show() {
+export function ShowPage() {
   const { id } = useParams();
   // Should only happen if this component is rendered outside of a <Route> with
   // the :id param

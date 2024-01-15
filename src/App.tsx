@@ -1,9 +1,9 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
-import { Shows } from "./pages/Shows.tsx";
-import { Show } from "./pages/Show.tsx";
-import { Landing } from "./pages/Landing.tsx";
+import { ShowSearchPage } from "./pages/ShowSearchPage.tsx";
+import { ShowPage } from "./pages/ShowPage.tsx";
+import { LandingPage } from "./pages/LandingPage.tsx";
 import "./index.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { NotFoundPage } from "./pages/404Page.tsx";
@@ -23,15 +23,15 @@ const queryClient = new QueryClient();
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Landing />,
+    element: <LandingPage />,
   },
   {
     path: "/shows",
-    element: <Shows />,
+    element: <ShowSearchPage />,
   },
   {
     path: "/shows/:id",
-    element: <Show />,
+    element: <ShowPage />,
   },
   {
     path: "*",
