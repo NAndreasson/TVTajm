@@ -13,8 +13,8 @@ function createBrowserRouter(initialEntries: string[]) {
 }
 
 describe("useSearchQuery", () => {
-  describe("given no search query", () => {
-    test("returns an empty string", () => {
+  describe("when route does not contain a search query", () => {
+    test("the search string is empty", () => {
       const { result } = renderHook(() => useSearch(), {
         wrapper: createBrowserRouter(["/"]),
       });
@@ -23,10 +23,20 @@ describe("useSearchQuery", () => {
     });
   });
 
-  describe("given an initial search query", () => {
-    test("returns the search query", () => {
+  describe("when the route contains a search query", () => {
+    test("the search string is equal to the search query", () => {
       const { result } = renderHook(() => useSearch(), {
         wrapper: createBrowserRouter(["/shows?search=Snowfall"]),
+      });
+
+      expect(result.current.searchString).toBe("Snowfall");
+    });
+  });
+
+  describe("when the route contains multiple search queries", () => {
+    test("the search string is equal to the first query", () => {
+      const { result } = renderHook(() => useSearch(), {
+        wrapper: createBrowserRouter(["/shows?search=Snowfall&search=Devs"]),
       });
 
       expect(result.current.searchString).toBe("Snowfall");
