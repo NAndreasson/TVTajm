@@ -1,15 +1,16 @@
 import { TvMazeShow } from "../../api/tvMaze";
-import { Link } from "react-router-dom";
+import { ShowLink } from "../ShowLink";
 import { Genres } from "../Show/Genres";
 import { Dates } from "../Show/Dates";
+import { ImageContainer, ShowImage } from "../ShowImage";
 
 export function ShowListItemSkeleton() {
   return (
     <li className="py-4 flex" data-testid="show-list-item-skeleton">
       {/* Placeholder for image */}
-      <div className="w-36 bg-gray-200 animate-pulse">
-        <div className="h-24"></div>
-      </div>
+      <ImageContainer className="bg-gray-200 animate-pulse">
+        <div className="w-full h-full"></div>
+      </ImageContainer>
 
       <div className="p-4 flex-grow">
         {/* Placeholder for title */}
@@ -20,9 +21,6 @@ export function ShowListItemSkeleton() {
 
         {/* Placeholder for genres */}
         <div className="h-4 bg-gray-200 rounded animate-pulse mb-2"></div>
-
-        {/* Placeholder for summary */}
-        <div className="h-16 bg-gray-200 rounded animate-pulse"></div>
       </div>
     </li>
   );
@@ -37,26 +35,17 @@ export function ShowListItem(props: ShowListItemProps) {
 
   return (
     <li className="py-4 flex" data-testid="show-list-item">
-      {/* if there's an image, use the medium version, fixed size */}
-      <Link data-testid="show-thumbnail-link" to={`/shows/${show.id}`}>
-        <div className="w-24 md:w-36 flex-shrink-0">
-          {show.image && <img src={show.image.medium} alt={show.name} />}
-          {/* create some kind of placeholder if missing image */}
-          {!show.image && (
-            <div className="bg-gray-200 w-full h-full">
-              <div className="text-center">Missing image</div>
-            </div>
-          )}
-        </div>
-      </Link>
+      <ShowLink testId="show-thumbnail-link" id={show.id}>
+        <ShowImage name={show.name} image={show.image} />
+      </ShowLink>
       <div className="p-4">
-        <h1 className="text-2xl">
-          <Link data-testid="show-link" to={`/shows/${show.id}`}>
+        <h1 className="text-xl md:text-2xl">
+          <ShowLink testId="show-link" id={show.id}>
             {show.name}
-          </Link>
+          </ShowLink>
         </h1>
         <Dates premiered={show.premiered} ended={show.ended} />
-        <Genres genres={show.genres} />
+        <Genres genres={show.genres} className="mt-2" />
       </div>
     </li>
   );

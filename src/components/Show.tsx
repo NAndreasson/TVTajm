@@ -2,6 +2,7 @@ import { TvMazeShow as ShowType } from "../api/tvMaze";
 import { Genres } from "./Show/Genres";
 import { Dates } from "./Show/Dates";
 import { SanitizedShowSummary } from "./SanitizedShowSummary";
+import { ShowImage } from "./ShowImage";
 
 export function ShowSkeleton() {
   return (
@@ -33,13 +34,7 @@ interface ShowDetailsProps {
 export function ShowDetails({ show }: ShowDetailsProps) {
   return (
     <div className="bg-white p-8">
-      {show.image && (
-        <img
-          src={show.image.medium}
-          alt={`Cover image for ${show.name}`}
-          className="max-w-full mx-auto mb-4"
-        />
-      )}
+      <ShowImage className="mx-auto mb-4" name={show.name} image={show.image} />
       <h1 data-testid="show-heading" className="text-2xl font-bold mb-2">
         {show.name}
       </h1>
