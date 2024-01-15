@@ -1,5 +1,5 @@
 import { SearchForm } from "../components/Search";
-import { name } from "../config.json";
+import { SITE_NAME } from "../siteConfig";
 import { Footer } from "../layouts/Footer";
 
 function BaseLayout({ children }: { children: React.ReactNode }) {
@@ -15,7 +15,7 @@ export function LandingPage() {
   return (
     <BaseLayout>
       <div className="flex flex-col gap-4 w-full">
-        <h1 className="text-center font-bold text-4xl">{name}</h1>
+        <h1 className="text-center font-bold text-4xl">{SITE_NAME}</h1>
         <SearchForm />
         <p className="text-center">
           Your favorite TV-shows a few keystrokes away.

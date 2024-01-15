@@ -7,12 +7,13 @@ import { LandingPage } from "./pages/LandingPage.tsx";
 import "./index.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { NotFoundPage } from "./pages/404Page.tsx";
+import { SITE_NAME } from "./siteConfig.ts";
 
 function HelmetWrapper({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Helmet>
-        <title>TVtajm</title>
+        <title>{SITE_NAME}</title>
       </Helmet>
       {children}
     </>
@@ -38,6 +39,8 @@ const router = createBrowserRouter([
     element: <NotFoundPage />,
   },
 ]);
+
+// TODO: wrap in ErrorBoundary
 
 export function App() {
   return (
