@@ -13,7 +13,7 @@ export function Genres(props: Props) {
 
   return (
     <div className={`text-gray-500 ${className}`}>
-      Genres: <span data-testId="genres">{genres.join(", ")}</span>
+      Genres: <span data-testid="genres">{genres.join(", ")}</span>
     </div>
   );
 }
