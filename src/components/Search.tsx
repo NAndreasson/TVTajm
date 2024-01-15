@@ -18,14 +18,14 @@ export function SearchForm() {
           data-testid="search-input"
           aria-label="Search for a TV show"
           placeholder="Search"
-          className="block w-full border-l border-t border-b border-gray-400 px-3 py-2 rounded-l-full text-black "
+          className="block w-full border border-gray-400 px-3 py-2 rounded-l-full text-black "
           value={searchInputValue}
           onChange={(event) => setSearchInputValue(event.target.value)}
         />
         <button
           type="submit"
           aria-label="Submit search query"
-          className="text-black bg-white border-r border-t border-b border-gray-400 rounded-r-full px-4"
+          className="text-black bg-gray-100 border border-gray-400 rounded-r-full px-4 pr-6"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
