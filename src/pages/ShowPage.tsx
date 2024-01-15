@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
-import { FetchError, getShow } from "../api/tvMaze";
+import { getShow } from "../api/tvMaze";
+import { FetchError } from "../api/FetchError";
 import invariant from "tiny-invariant";
 import { useQuery } from "react-query";
 import { Layout } from "../layouts/Layout";

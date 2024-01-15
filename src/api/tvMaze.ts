@@ -1,15 +1,6 @@
 import { z } from "zod";
-
-export class FetchError extends Error {
-  readonly statusCode: number;
-
-  constructor(message: string, statusCode: number) {
-    super(message);
-
-    this.name = "FetchError";
-    this.statusCode = statusCode;
-  }
-}
+import { FetchError } from "./FetchError";
+import { tvMazeShowSchema } from "./tvMazeSchemas";
 
 function fetchFromTVMaze(path: string) {
   return fetch(`https://api.tvmaze.com/${path}`)
@@ -22,23 +13,6 @@ function fetchFromTVMaze(path: string) {
     .then((res) => res.json());
 }
 
-export const tvMazeShowSchema = z.object({
-  id: z.number(),
-  name: z.string(),
-  genres: z.array(z.string()),
-  premiered: z.string().nullable(),
-  ended: z.string().nullable(),
-  summary: z.string().nullable(),
-  image: z
-    .object({
-      medium: z.string(),
-      original: z.string(),
-    })
-    .nullable(),
-});
-
-export type TvMazeShow = z.infer<typeof tvMazeShowSchema>;
-
 const showSearchResponse = z.array(
   z.object({
     show: tvMazeShowSchema,
@@ -48,7 +22,6 @@ const showSearchResponse = z.array(
 export type ShowSearchResponseList = z.infer<typeof showSearchResponse>;
 
 export function searchShows(query: string): Promise<ShowSearchResponseList> {
-  // TODO: experiment with whether this is actually necessary
   const escapedQuery = encodeURIComponent(query);
   return fetchFromTVMaze(`search/shows?q=${escapedQuery}`).then((res) =>
     // TODO: Filter and log shows that don't conform to our expected schema.

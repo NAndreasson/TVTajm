@@ -1,5 +1,5 @@
 import { Interweave } from "interweave";
-import { TvMazeShow } from "../api/tvMaze";
+import { TvMazeShow } from "../api/tvMazeSchemas";
 
 interface Props {
   summary: TvMazeShow["summary"];

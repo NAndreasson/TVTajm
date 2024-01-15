@@ -1,4 +1,4 @@
-import { TvMazeShow as ShowType } from "../api/tvMaze";
+import { TvMazeShow as ShowType } from "../api/tvMazeSchemas";
 import { Genres } from "./Show/Genres";
 import { Dates } from "./Show/Dates";
 import { SanitizedShowSummary } from "./SanitizedShowSummary";

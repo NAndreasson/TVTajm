@@ -1,4 +1,4 @@
-import { TvMazeShow } from "../../api/tvMaze";
+import { TvMazeShow } from "../../api/tvMazeSchemas";
 
 type Props = Pick<TvMazeShow, "premiered" | "ended"> & { className?: string };
 

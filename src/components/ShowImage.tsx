@@ -1,4 +1,4 @@
-import { TvMazeShow } from "../api/tvMaze";
+import { TvMazeShow } from "../api/tvMazeSchemas";
 
 export const ImageContainer = (props: {
   children: React.ReactNode;

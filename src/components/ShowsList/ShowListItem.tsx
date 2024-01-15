@@ -1,4 +1,4 @@
-import { TvMazeShow } from "../../api/tvMaze";
+import { TvMazeShow } from "../../api/tvMazeSchemas";
 import { ShowLink } from "../ShowLink";
 import { Genres } from "../Show/Genres";
 import { Dates } from "../Show/Dates";
