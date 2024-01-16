@@ -18,7 +18,7 @@ export function SearchForm() {
           data-testid="search-input"
           aria-label="Search for a TV show"
           placeholder="Search"
-          className="block w-full border-l border-t border-b border-gray-400 px-3 py-2 rounded-l-full text-black "
+          className="block w-full bg-white border-l border-t border-b border-gray-400 px-3 py-2 rounded-l-full text-black "
           value={searchInputValue}
           onChange={(event) => setSearchInputValue(event.target.value)}
         />
