@@ -22,7 +22,7 @@ The app was built using the following technologies:
 
 ## Getting Started
 
-To run this app locally, you need to have node and npm installed.
+To run this app locally, please ensure that you have Node.js and npm installed. The app was developed using Node.js v20.10.0 and npm v10.2.3.
 
 1. Clone the repository:
 
